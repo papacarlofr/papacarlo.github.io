@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Papacarlo Menuiserie | Menuiserie Sur Mesure Haut de Gamme</title>
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>
+    Papacarlo Menuiserie | Menuiserie Sur Mesure Haut de Gamme
+  </title>
 
   <meta
     name="description"
@@ -19,33 +27,56 @@
   <meta name="author" content="Papacarlo" />
   <meta name="robots" content="index, follow" />
 
+  <!-- Open Graph -->
+
   <meta property="og:title" content="Papacarlo Menuiserie" />
+
   <meta
     property="og:description"
     content="Créations artisanales et menuiserie sur mesure haut de gamme."
   />
+
   <meta property="og:type" content="website" />
+
   <meta property="og:url" content="https://papacarlo.fr" />
-  <meta property="og:image" content="https://papacarlo.fr/logo.png" />
+
+  <meta
+    property="og:image"
+    content="https://papacarlo.fr/logo.png"
+  />
+
+  <!-- Twitter -->
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Papacarlo Menuiserie" />
+
+  <meta
+    name="twitter:title"
+    content="Papacarlo Menuiserie"
+  />
+
   <meta
     name="twitter:description"
     content="Menuiserie premium et mobilier sur mesure."
   />
 
+  <!-- SEO -->
+
   <link rel="canonical" href="https://papacarlo.fr" />
+
   <link rel="icon" href="favicon.ico" />
 
-  <!-- Google Fonts -->
+  <!-- Fonts -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
+
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
     rel="stylesheet"
   />
+
+  <!-- Structured Data -->
 
   <script type="application/ld+json">
   {
@@ -63,6 +94,8 @@
   </script>
 
   <style>
+
+    /* RESET */
 
     * {
       margin: 0;
@@ -105,55 +138,67 @@
 
     header {
       width: 100%;
-      padding: 24px 8%;
+
+      padding: 26px 8%;
+
       display: flex;
       justify-content: space-between;
       align-items: center;
+
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(255,255,255,0.92);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid #ececec;
-      transition: 0.3s ease;
+
+      background: rgba(255,255,255,0.88);
+      backdrop-filter: blur(14px);
+
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+
+      transition: 0.35s ease;
     }
 
     .header-scrolled {
       padding: 18px 8%;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+
+      background: rgba(255,255,255,0.94);
+
+      box-shadow: 0 6px 30px rgba(0,0,0,0.04);
     }
 
     .brand {
       display: flex;
       align-items: center;
-      gap: 14px;
     }
 
     .brand img {
-      width: 58px;
-      height: 58px;
-      object-fit: cover;
-      border-radius: 50%;
+      width: 132px;
+      height: auto;
+
+      display: block;
+
+      transition: 0.35s ease;
     }
 
-    .logo {
-      font-family: "Cormorant Garamond", serif;
-      font-size: clamp(30px, 2vw, 42px);
-      font-weight: 700;
-      letter-spacing: 3px;
+    .header-scrolled .brand img {
+      width: 112px;
     }
 
     nav {
       display: flex;
-      gap: 34px;
+      align-items: center;
+      gap: 42px;
     }
 
     nav a {
-      font-size: 14px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      transition: 0.3s ease;
       position: relative;
+
+      font-size: 13px;
+      font-weight: 500;
+
+      text-transform: uppercase;
+      letter-spacing: 2px;
+
+      transition: 0.3s ease;
     }
 
     nav a:hover {
@@ -162,12 +207,16 @@
 
     nav a::after {
       content: "";
+
       position: absolute;
       left: 0;
-      bottom: -6px;
+      bottom: -8px;
+
       width: 0;
       height: 1px;
+
       background: #111;
+
       transition: 0.3s ease;
     }
 
@@ -187,9 +236,11 @@
       display: flex;
       align-items: center;
       justify-content: center;
+
       text-align: center;
 
       padding: 100px 8%;
+
       color: white;
     }
 
@@ -199,23 +250,31 @@
 
     .hero h1 {
       font-family: "Cormorant Garamond", serif;
+
       font-size: clamp(52px, 7vw, 110px);
+
       line-height: 0.95;
+
       margin-bottom: 32px;
+
       font-weight: 700;
+
       letter-spacing: -1px;
     }
 
     .hero p {
       max-width: 850px;
+
       margin: 0 auto 42px;
 
       font-size: clamp(18px, 2vw, 26px);
+
       color: rgba(255,255,255,0.85);
     }
 
     .btn {
       display: inline-block;
+
       padding: 18px 42px;
 
       border: 1px solid rgba(255,255,255,0.8);
@@ -224,6 +283,7 @@
 
       text-transform: uppercase;
       letter-spacing: 1px;
+
       font-size: 13px;
       font-weight: 600;
 
@@ -235,7 +295,7 @@
       color: #111;
     }
 
-    /* GLOBAL SECTIONS */
+    /* SECTIONS */
 
     section {
       padding: 130px 8%;
@@ -243,19 +303,25 @@
 
     .section-title {
       font-family: "Cormorant Garamond", serif;
+
       font-size: clamp(42px, 5vw, 70px);
+
       text-align: center;
+
       margin-bottom: 18px;
+
       line-height: 1;
     }
 
     .section-subtitle {
       max-width: 900px;
+
       margin: 0 auto 80px;
 
       text-align: center;
 
       color: #666;
+
       font-size: 18px;
     }
 
@@ -269,7 +335,9 @@
 
     .service-card {
       padding: 58px;
+
       border: 1px solid #ececec;
+
       background: white;
 
       transition: 0.4s ease;
@@ -277,12 +345,15 @@
 
     .service-card:hover {
       transform: translateY(-10px);
+
       box-shadow: 0 15px 40px rgba(0,0,0,0.06);
     }
 
     .service-card h3 {
       font-family: "Cormorant Garamond", serif;
+
       font-size: 34px;
+
       margin-bottom: 20px;
     }
 
@@ -301,15 +372,20 @@
 
     .portfolio-item {
       position: relative;
+
       overflow: hidden;
+
       height: 560px;
+
       background: #f4f4f4;
     }
 
     .portfolio-item img {
       width: 100%;
       height: 100%;
+
       object-fit: cover;
+
       transition: 0.5s ease;
     }
 
@@ -357,7 +433,9 @@
 
     .contact h2 {
       font-family: "Cormorant Garamond", serif;
+
       font-size: clamp(42px, 5vw, 70px);
+
       margin-bottom: 20px;
     }
 
@@ -369,7 +447,9 @@
 
     .contact .btn {
       margin-top: 24px;
+
       border-color: #111;
+
       color: #111;
     }
 
@@ -382,6 +462,7 @@
 
     footer {
       padding: 40px 8%;
+
       border-top: 1px solid #ececec;
 
       display: flex;
@@ -421,15 +502,34 @@
     @media(max-width: 768px) {
 
       header {
-        flex-direction: column;
-        gap: 20px;
         padding: 22px 5%;
+
+        flex-direction: column;
+        gap: 22px;
+      }
+
+      .header-scrolled {
+        padding: 18px 5%;
+      }
+
+      .brand img {
+        width: 110px;
+      }
+
+      .header-scrolled .brand img {
+        width: 96px;
       }
 
       nav {
+        gap: 18px;
+
         flex-wrap: wrap;
         justify-content: center;
-        gap: 18px;
+      }
+
+      nav a {
+        font-size: 12px;
+        letter-spacing: 1px;
       }
 
       section {
@@ -492,6 +592,7 @@
     }
 
   </style>
+
 </head>
 
 <body>
@@ -500,15 +601,15 @@
 
   <header id="header">
 
-    <div class="brand">
+    <a href="#" class="brand">
+
       <img
-        src="img/logo.jpeg"
+        src="img/logo.svg"
         decoding="sync"
-        alt="Logo Papacarlo"
+        alt="Papacarlo Logo"
       />
 
-      <div class="logo">PAPACARLO</div>
-    </div>
+    </a>
 
     <nav>
       <a href="#services">Services</a>
@@ -548,7 +649,9 @@
 
     <div class="container">
 
-      <h2 class="section-title">Nos Services</h2>
+      <h2 class="section-title">
+        Nos Services
+      </h2>
 
       <p class="section-subtitle">
         Un savoir-faire artisanal au service des projets résidentiels et professionnels.
@@ -557,27 +660,39 @@
       <div class="services-grid">
 
         <div class="service-card">
-          <h3>Cuisines Sur Mesure</h3>
+
+          <h3>
+            Cuisines Sur Mesure
+          </h3>
 
           <p>
             Création de cuisines premium adaptées à votre espace et votre style de vie.
           </p>
+
         </div>
 
         <div class="service-card">
-          <h3>Dressing & Rangements</h3>
+
+          <h3>
+            Dressing & Rangements
+          </h3>
 
           <p>
             Optimisation élégante des espaces avec des solutions fonctionnelles et design.
           </p>
+
         </div>
 
         <div class="service-card">
-          <h3>Mobilier Haut de Gamme</h3>
+
+          <h3>
+            Mobilier Haut de Gamme
+          </h3>
 
           <p>
             Tables, bibliothèques, meubles et pièces uniques fabriquées avec précision.
           </p>
+
         </div>
 
       </div>
@@ -592,7 +707,9 @@
 
     <div class="container">
 
-      <h2 class="section-title">Réalisations</h2>
+      <h2 class="section-title">
+        Réalisations
+      </h2>
 
       <p class="section-subtitle">
         Découvrez une sélection de projets réalisés avec exigence et attention au détail.
@@ -631,7 +748,12 @@
       <div class="about">
 
         <div class="about-image">
-          <img src="img/about.jpg" alt="Atelier Papacarlo">
+
+          <img
+            src="img/about.jpg"
+            alt="Atelier Papacarlo"
+          />
+
         </div>
 
         <div class="about-content">
@@ -669,21 +791,36 @@
 
     <div class="container">
 
-      <h2>Contact</h2>
+      <h2>
+        Contact
+      </h2>
 
-      <p>Parlons de votre projet.</p>
+      <p>
+        Parlons de votre projet.
+      </p>
 
       <br>
 
-      <p>📞 06 XX XX XX XX</p>
+      <p>
+        📞 06 XX XX XX XX
+      </p>
 
-      <p>📧 contact@papacarlo.fr</p>
+      <p>
+        📧 contact@papacarlo.fr
+      </p>
 
-      <p>📍 Île-de-France</p>
+      <p>
+        📍 Île-de-France
+      </p>
 
-      <p>SIRET : XXXXXXXX</p>
+      <p>
+        SIRET : XXXXXXXX
+      </p>
 
-      <a href="mailto:contact@papacarlo.fr" class="btn">
+      <a
+        href="mailto:contact@papacarlo.fr"
+        class="btn"
+      >
         Nous contacter
       </a>
 
@@ -724,4 +861,5 @@
   </script>
 
 </body>
+
 </html>
