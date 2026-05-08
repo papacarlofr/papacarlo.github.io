@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SVG Logo Example</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+    }
+
+    header {
+      background: white;
+      padding: 20px 40px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    }
+
+    /* Логотип */
+    .logo {
+      width: 180px;
+      height: auto;
+      display: block;
+      transition: 0.3s ease;
+    }
+
+    /* Адаптивность */
+    @media (max-width: 768px) {
+      .logo {
+        width: 130px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo {
+        width: 100px;
+      }
+    }
+
+    main {
+      padding: 60px 40px;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 18px;
+      color: #555;
+      max-width: 700px;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <!-- SVG логотип -->
+    <img src="logo.svg" alt="Logo" class="logo">
+  </header>
+
+  <main>
+    <h1>SVG Logo Responsive Example</h1>
+
+    <p>
+      Размер SVG логотипа регулируется через CSS.
+      SVG остаётся чётким на любых экранах и масштабируется без потери качества.
+    </p>
+  </main>
+
+</body>
+</html>
