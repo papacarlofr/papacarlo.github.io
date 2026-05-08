@@ -1,195 +1,752 @@
-# Papa Carlo — Modern Landing Page
-
-Создай в репозитории файл:
-
-```text
-index.html
-```
-
-И вставь этот код:
-
-```html
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Papa Carlo</title>
+  <title>Papacarlo Menuiserie | Menuiserie Sur Mesure Haut de Gamme</title>
+  <meta name="description" content="Papacarlo Menuiserie réalise des projets de menuiserie sur mesure haut de gamme : cuisines, dressings, mobilier, agencement intérieur et créations artisanales premium." />
+  <meta name="keywords" content="menuiserie sur mesure, menuisier, mobilier sur mesure, dressing, cuisine haut de gamme, artisan menuisier, Papacarlo" />
+  <meta name="author" content="Papacarlo" />
+  <meta name="robots" content="index, follow" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <meta property="og:title" content="Papacarlo Menuiserie" />
+  <meta property="og:description" content="Créations artisanales et menuiserie sur mesure haut de gamme." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://papacarlo.fr" />
+  <meta property="og:image" content="https://papacarlo.fr/logo.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Papacarlo Menuiserie" />
+  <meta name="twitter:description" content="Menuiserie premium et mobilier sur mesure." />
+
+  <link rel="canonical" href="https://papacarlo.fr" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Papacarlo Menuiserie",
+    "url": "https://papacarlo.fr",
+    "telephone": "+33XXXXXXXXX",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "FR"
+    },
+    "description": "Menuiserie sur mesure et agencement intérieur haut de gamme."
+  }
+  </script>
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    body {
-      font-family: 'Inter', sans-serif;
-      background: #0f0f0f;
-      color: white;
-      overflow-x: hidden;
-    }
+html {
+  scroll-behavior: smooth;
+}
 
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 40px;
-      position: relative;
-      background:
-        radial-gradient(circle at top left, rgba(255,100,0,.25), transparent 30%),
-        radial-gradient(circle at bottom right, rgba(255,0,80,.2), transparent 35%),
-        #0f0f0f;
-    }
+body {
+  font-family: Arial, sans-serif;
+  background: #ffffff;
+  color: #111111;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
 
-    .container {
-      max-width: 900px;
-      z-index: 2;
-    }
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
-    .badge {
-      display: inline-block;
-      padding: 10px 18px;
-      border: 1px solid rgba(255,255,255,.15);
-      border-radius: 999px;
-      background: rgba(255,255,255,.04);
-      margin-bottom: 24px;
-      font-size: 14px;
-      color: rgba(255,255,255,.8);
-      backdrop-filter: blur(10px);
-    }
+img,
+svg,
+video {
+  max-width: 100%;
+  height: auto;
+}
 
-    h1 {
-      font-size: clamp(56px, 10vw, 120px);
-      line-height: .95;
-      font-weight: 700;
-      letter-spacing: -4px;
-      margin-bottom: 24px;
-    }
+header {
+  width: 100%;
+  padding: 28px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e5e5e5;
+  position: sticky;
+  top: 0;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(10px);
+  z-index: 100;
+}
 
-    .gradient {
-      background: linear-gradient(90deg, #ff7a18, #ff0066);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
+.logo {
+  font-size: clamp(22px, 2vw, 34px);
+  font-weight: bold;
+  letter-spacing: 4px;
+}
 
-    .subtitle {
-      font-size: 22px;
-      line-height: 1.6;
-      color: rgba(255,255,255,.7);
-      max-width: 700px;
-      margin: 0 auto 40px;
-    }
+nav {
+  display: flex;
+  gap: 32px;
+}
 
-    .buttons {
-      display: flex;
-      justify-content: center;
-      gap: 18px;
-      flex-wrap: wrap;
-    }
+nav a {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
 
-    .btn {
-      padding: 16px 28px;
-      border-radius: 14px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: .25s ease;
-    }
+nav a:hover {
+  opacity: 0.6;
+}
 
-    .btn-primary {
-      background: linear-gradient(90deg, #ff7a18, #ff0066);
-      color: white;
-      box-shadow: 0 10px 30px rgba(255,0,102,.25);
-    }
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 80px 8%;
+}
 
-    .btn-primary:hover {
-      transform: translateY(-3px);
-    }
+.hero h1 {
+  font-size: clamp(42px, 6vw, 96px);
+  max-width: 1200px;
+  line-height: 1.05;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
 
-    .btn-secondary {
-      border: 1px solid rgba(255,255,255,.15);
-      color: white;
-      background: rgba(255,255,255,.04);
-      backdrop-filter: blur(8px);
-    }
+.hero p {
+  max-width: 900px;
+  font-size: clamp(18px, 2vw, 24px);
+  color: #555;
+  margin-bottom: 42px;
+}
 
-    .btn-secondary:hover {
-      background: rgba(255,255,255,.08);
-    }
+.btn {
+  display: inline-block;
+  padding: 16px 38px;
+  border: 1px solid #111;
+  transition: 0.3s;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
 
-    .footer {
-      position: absolute;
-      bottom: 30px;
-      width: 100%;
-      text-align: center;
-      color: rgba(255,255,255,.35);
-      font-size: 14px;
-    }
+.btn:hover {
+  background: #111;
+  color: #fff;
+}
 
-    @media (max-width: 768px) {
-      .subtitle {
-        font-size: 18px;
-      }
+section {
+  padding: 120px 8%;
+}
 
-      .buttons {
-        flex-direction: column;
-      }
+.section-title {
+  font-size: clamp(34px, 4vw, 58px);
+  margin-bottom: 20px;
+  text-align: center;
+}
 
-      .btn {
-        width: 100%;
-      }
-    }
+.section-subtitle {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 70px;
+  color: #666;
+  font-size: 18px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.service-card {
+  border: 1px solid #e5e5e5;
+  padding: 56px;
+  transition: 0.35s ease;
+  background: #fff;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+.service-card h3 {
+  margin-bottom: 18px;
+  font-size: 28px;
+}
+
+.service-card p {
+  font-size: 17px;
+  color: #555;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.portfolio-item {
+  background: #f3f3f3;
+  height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: #666;
+  transition: 0.3s;
+}
+
+.portfolio-item:hover {
+  transform: scale(1.01);
+}
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.about-image {
+  background: #f1f1f1;
+  height: 650px;
+}
+
+.about p {
+  font-size: 18px;
+  color: #555;
+}
+
+.contact {
+  text-align: center;
+}
+
+.contact h2 {
+  margin-bottom: 20px;
+  font-size: clamp(36px, 4vw, 58px);
+}
+
+.contact p {
+  font-size: 18px;
+}
+
+footer {
+  padding: 50px 8%;
+  border-top: 1px solid #e5e5e5;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  font-size: 14px;
+  color: #666;
+}
+
+@media(max-width: 1100px) {
+
+  .services-grid,
+  .portfolio-grid,
+  .about {
+    grid-template-columns: 1fr;
+  }
+
+  .about-image {
+    height: 500px;
+  }
+}
+
+@media(max-width: 768px) {
+
+  header {
+    flex-direction: column;
+    gap: 18px;
+    padding: 22px 5%;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  section {
+    padding: 90px 5%;
+  }
+
+  .hero {
+    padding: 60px 5%;
+  }
+
+  .hero h1 {
+    line-height: 1.1;
+  }
+
+  .service-card {
+    padding: 36px;
+  }
+
+  .portfolio-item {
+    height: 320px;
+    font-size: 22px;
+  }
+
+  .about-image {
+    height: 380px;
+  }
+}
+
+@media(max-width: 480px) {
+
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+
+  .section-title,
+  .contact h2 {
+    font-size: 34px;
+  }
+
+  .portfolio-item {
+    height: 240px;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+```
+
+Главные улучшения:
+
+* сайт стал крупнее и премиальнее на ноутбуках
+* hero section теперь выглядит как luxury landing page
+* исправлен responsive scaling
+* убран horizontal scroll
+* улучшены отступы
+* увеличены карточки и typography
+* улучшен desktop UX
+* улучшена адаптивность iPhone / MacBook / 4K
+# Papacarlo — Responsive Desktop Upgrade
+
+Замените ваш блок `<style>` на этот улучшенный вариант.
+
+```css
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #ffffff;
+  color: #111111;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img,
+svg,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+header {
+  width: 100%;
+  padding: 28px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e5e5e5;
+  position: sticky;
+  top: 0;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(10px);
+  z-index: 100;
+}
+
+.logo {
+  font-size: clamp(22px, 2vw, 34px);
+  font-weight: bold;
+  letter-spacing: 4px;
+}
+
+nav {
+  display: flex;
+  gap: 32px;
+}
+
+nav a {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  opacity: 0.6;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 80px 8%;
+}
+
+.hero h1 {
+  font-size: clamp(42px, 6vw, 96px);
+  max-width: 1200px;
+  line-height: 1.05;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+.hero p {
+  max-width: 900px;
+  font-size: clamp(18px, 2vw, 24px);
+  color: #555;
+  margin-bottom: 42px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 16px 38px;
+  border: 1px solid #111;
+  transition: 0.3s;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.btn:hover {
+  background: #111;
+  color: #fff;
+}
+
+section {
+  padding: 120px 8%;
+}
+
+.section-title {
+  font-size: clamp(34px, 4vw, 58px);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.section-subtitle {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 70px;
+  color: #666;
+  font-size: 18px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.service-card {
+  border: 1px solid #e5e5e5;
+  padding: 56px;
+  transition: 0.35s ease;
+  background: #fff;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+.service-card h3 {
+  margin-bottom: 18px;
+  font-size: 28px;
+}
+
+.service-card p {
+  font-size: 17px;
+  color: #555;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.portfolio-item {
+  background: #f3f3f3;
+  height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: #666;
+  transition: 0.3s;
+}
+
+.portfolio-item:hover {
+  transform: scale(1.01);
+}
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.about-image {
+  background: #f1f1f1;
+  height: 650px;
+}
+
+.about p {
+  font-size: 18px;
+  color: #555;
+}
+
+.contact {
+  text-align: center;
+}
+
+.contact h2 {
+  margin-bottom: 20px;
+  font-size: clamp(36px, 4vw, 58px);
+}
+
+.contact p {
+  font-size: 18px;
+}
+
+footer {
+  padding: 50px 8%;
+  border-top: 1px solid #e5e5e5;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  font-size: 14px;
+  color: #666;
+}
+
+@media(max-width: 1100px) {
+
+  .services-grid,
+  .portfolio-grid,
+  .about {
+    grid-template-columns: 1fr;
+  }
+
+  .about-image {
+    height: 500px;
+  }
+}
+
+@media(max-width: 768px) {
+
+  header {
+    flex-direction: column;
+    gap: 18px;
+    padding: 22px 5%;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  section {
+    padding: 90px 5%;
+  }
+
+  .hero {
+    padding: 60px 5%;
+  }
+
+  .hero h1 {
+    line-height: 1.1;
+  }
+
+  .service-card {
+    padding: 36px;
+  }
+
+  .portfolio-item {
+    height: 320px;
+    font-size: 22px;
+  }
+
+  .about-image {
+    height: 380px;
+  }
+}
+
+@media(max-width: 480px) {
+
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+
+  .section-title,
+  .contact h2 {
+    font-size: 34px;
+  }
+
+  .portfolio-item {
+    height: 240px;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
   </style>
 </head>
 <body>
 
-  <section class="hero">
-    <div class="container">
+<header>
+  <div class="logo">PAPACARLO</div>
+  <div><img src="img/logo.jpeg" decoding=”sync” alt="LOGO"></div>
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#portfolio">Réalisations</a>
+    <a href="#about">À propos</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-      <div class="badge">
-        PAPACARLO.FR
-      </div>
+<section class="hero">
+  <h1>Menuiserie Sur Mesure Haut de Gamme</h1>
+  <p>
+    Papacarlo conçoit et réalise des créations artisanales uniques : cuisines,
+    dressings, mobilier sur mesure et agencement intérieur premium.
+  </p>
+  <a href="#contact" class="btn">Demander un devis</a>
+</section>
 
-      <h1>
-        Modern Digital <br>
-        <span class="gradient">Experience</span>
-      </h1>
+<section id="services">
+  <h2 class="section-title">Nos Services</h2>
+  <p class="section-subtitle">
+    Un savoir-faire artisanal au service des projets résidentiels et professionnels.
+  </p>
 
-      <p class="subtitle">
-        Creative brand, modern aesthetic and premium web presence.
-        Built with GitHub Pages.
+  <div class="services-grid">
+    <div class="service-card">
+      <h3>Cuisines Sur Mesure</h3>
+      <p>Création de cuisines premium adaptées à votre espace et votre style de vie.</p>
+    </div>
+
+    <div class="service-card">
+      <h3>Dressing & Rangements</h3>
+      <p>Optimisation élégante des espaces avec des solutions fonctionnelles et design.</p>
+    </div>
+
+    <div class="service-card">
+      <h3>Mobilier Haut de Gamme</h3>
+      <p>Tables, bibliothèques, meubles et pièces uniques fabriquées avec précision.</p>
+    </div>
+  </div>
+</section>
+
+<section id="portfolio">
+  <h2 class="section-title">Réalisations</h2>
+  <p class="section-subtitle">
+    Découvrez une sélection de projets réalisés avec exigence et attention au détail.
+  </p>
+
+  <div class="portfolio-grid">
+    <div class="portfolio-item">Projet 01</div>
+    <div class="portfolio-item">Projet 02</div>
+    <div class="portfolio-item">Projet 03</div>
+    <div class="portfolio-item">Projet 04</div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="about">
+    <div class="about-image"></div>
+
+    <div>
+      <h2 class="section-title" style="text-align:left;">Papacarlo</h2>
+      <p>
+        Nous réalisons des projets de menuiserie sur mesure avec une approche moderne,
+        minimaliste et haut de gamme.
       </p>
-
-      <div class="buttons">
-        <a href="#" class="btn btn-primary">Discover</a>
-        <a href="#" class="btn btn-secondary">Instagram</a>
-      </div>
-
+      <br>
+      <p>
+        Chaque création est pensée pour durer, valoriser les matériaux nobles
+        et s'intégrer parfaitement à votre intérieur.
+      </p>
     </div>
+  </div>
+</section>
 
-    <div class="footer">
-      © 2026 Papa Carlo
-    </div>
-  </section>
+<section id="contact" class="contact">
+  <h2>Contact</h2>
+  <p>Parlons de votre projet.</p>
+  <br>
+
+  <p>📞 06 XX XX XX XX</p>
+  <br>
+
+  <p>📧 contact@papacarlo.fr</p>
+  <br>
+
+  <p>📍 Île-de-France</p>
+  <br>
+
+  <p>SIRET: XXXXXXXX</p>
+  <br>
+
+  <a href="mailto:contact@papacarlo.fr" class="btn">Nous contacter</a>
+</section>
+
+<footer>
+  <div>
+    © 2026 Papacarlo Menuiserie
+  </div>
+
+  <div>
+    Menuiserie Sur Mesure • France
+  </div>
+</footer>
 
 </body>
 </html>
-```
-
-После вставки:
-
-1. Нажми `Commit changes`
-2. Подожди 1–2 минуты
-3. Открой сайт:
-
-```text
-https://papacarlo.fr
-```
-
-Сайт уже будет выглядеть как современный landing page.
