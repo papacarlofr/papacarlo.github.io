@@ -1,3 +1,14 @@
+# Papa Carlo — Modern Landing Page
+
+Создай в репозитории файл:
+
+```text
+index.html
+```
+
+И вставь этот код:
+
+```html
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -5,37 +16,180 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Papa Carlo</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
-    body{
-      margin:0;
-      font-family:Arial,sans-serif;
-      background:#111;
-      color:white;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      height:100vh;
-      text-align:center;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    h1{
-      font-size:64px;
-      margin-bottom:10px;
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0f0f0f;
+      color: white;
+      overflow-x: hidden;
     }
 
-    p{
-      font-size:20px;
-      opacity:.7;
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px;
+      position: relative;
+      background:
+        radial-gradient(circle at top left, rgba(255,100,0,.25), transparent 30%),
+        radial-gradient(circle at bottom right, rgba(255,0,80,.2), transparent 35%),
+        #0f0f0f;
+    }
+
+    .container {
+      max-width: 900px;
+      z-index: 2;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 10px 18px;
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: 999px;
+      background: rgba(255,255,255,.04);
+      margin-bottom: 24px;
+      font-size: 14px;
+      color: rgba(255,255,255,.8);
+      backdrop-filter: blur(10px);
+    }
+
+    h1 {
+      font-size: clamp(56px, 10vw, 120px);
+      line-height: .95;
+      font-weight: 700;
+      letter-spacing: -4px;
+      margin-bottom: 24px;
+    }
+
+    .gradient {
+      background: linear-gradient(90deg, #ff7a18, #ff0066);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .subtitle {
+      font-size: 22px;
+      line-height: 1.6;
+      color: rgba(255,255,255,.7);
+      max-width: 700px;
+      margin: 0 auto 40px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 16px 28px;
+      border-radius: 14px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: .25s ease;
+    }
+
+    .btn-primary {
+      background: linear-gradient(90deg, #ff7a18, #ff0066);
+      color: white;
+      box-shadow: 0 10px 30px rgba(255,0,102,.25);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+    }
+
+    .btn-secondary {
+      border: 1px solid rgba(255,255,255,.15);
+      color: white;
+      background: rgba(255,255,255,.04);
+      backdrop-filter: blur(8px);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255,255,255,.08);
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 30px;
+      width: 100%;
+      text-align: center;
+      color: rgba(255,255,255,.35);
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .subtitle {
+        font-size: 18px;
+      }
+
+      .buttons {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
     }
   </style>
 </head>
-
 <body>
 
-  <div>
-    <h1>Papa Carlo</h1>
-    <p>Site coming soon</p>
-  </div>
+  <section class="hero">
+    <div class="container">
+
+      <div class="badge">
+        PAPACARLO.FR
+      </div>
+
+      <h1>
+        Modern Digital <br>
+        <span class="gradient">Experience</span>
+      </h1>
+
+      <p class="subtitle">
+        Creative brand, modern aesthetic and premium web presence.
+        Built with GitHub Pages.
+      </p>
+
+      <div class="buttons">
+        <a href="#" class="btn btn-primary">Discover</a>
+        <a href="#" class="btn btn-secondary">Instagram</a>
+      </div>
+
+    </div>
+
+    <div class="footer">
+      © 2026 Papa Carlo
+    </div>
+  </section>
 
 </body>
 </html>
+```
+
+После вставки:
+
+1. Нажми `Commit changes`
+2. Подожди 1–2 минуты
+3. Открой сайт:
+
+```text
+https://papacarlo.fr
+```
+
+Сайт уже будет выглядеть как современный landing page.
